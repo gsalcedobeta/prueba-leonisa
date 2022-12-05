@@ -1,0 +1,61 @@
+$LightBlue: #3dadb7;
+$DarkerBlue: #049aa7;
+
+body {
+    font-family: sans-serif;
+    color: #6a6a6a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+
+    p {
+        margin: 0;
+
+        strong {
+            color: $DarkerBlue;
+        }
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 400px;
+        border: 1px solid #CCC;
+        padding: 10px;
+    }
+
+    .progress {
+        height: 10px;
+
+        .progress-bar {
+            background-image: linear-gradient(135deg, $LightBlue 25%, $DarkerBlue 25%, $DarkerBlue 50%, $LightBlue 50%, $LightBlue 75%, $DarkerBlue 75%, $DarkerBlue);
+            position: relative;
+            overflow: visible;
+        }
+
+        .progress-bar::after {
+            content: "";
+            background: url('../assets/images/icons/truck-icon.svg');
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 0;
+            width: 20px;
+            height: 100%;
+            transform: scale(1.5);
+        }
+    }
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+
+        select {
+            padding: 7px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency API</title>
+</head>
+<body>
+    <form action="">
+        <input id="Valor" type="number" placeholder="$" onmouseout="Print()">
+        <select id="CurrencyFrom" onmouseout="CurrencyFromSelected()">
+            <option value="" selected disabled hidden>From</option>
+            <option value="USD">USD (US Dollar)</option>
+            <option value="EUR">EUR (Euro)</option>
+            <option value="COP">COP (Colombian Peso)</option>
+        </select>
+        <select id="CurrencyTo" onmouseout="CurrencyToSelected()">
+            <option value="" selected disabled hidden>To</option>
+            <option value="USD">USD (US Dollar)</option>
+            <option value="EUR">EUR (Euro)</option>
+            <option value="COP">COP (Colombian Peso)</option>
+        </select>
+    </form>
+    
+    <h5 id="valueFrom"><span></span></h5>
+    <h2 id="valueTo"><span></span></h2>
+
+    <script src="./js/fastforex.js"></script>
+</body>
+</html>
